@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "variant-demo"
+version = "2020.0.0"
+dependencies = [
+    "click;my_custom_numeric_marker<'2.7'",
+    "botocore;my_custom_enum_str_marker<'yes'",
+]
+variant-providers = [
+    "my_custom_provider",
+]
